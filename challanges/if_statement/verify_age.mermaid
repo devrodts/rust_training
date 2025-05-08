@@ -1,0 +1,12 @@
+flowchart TD
+    A[Start] --> B{age < 18?}
+    B -->|Yes| C[Return "You are a minor"]
+    B -->|No| D{age >= 18 and age < 60?}
+    D -->|Yes| E[Return "You are an adult"]
+    D -->|No| F{age >= 100?}
+    F -->|Yes| G[Return "You are a senior citizen"]
+    F -->|No| H[Return "Invalid age, are you alive?"]
+    C --> I[End]
+    E --> I
+    G --> I
+    H --> I
